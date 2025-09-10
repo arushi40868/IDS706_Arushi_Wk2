@@ -15,6 +15,44 @@ Week 2 analyzing a dataset for ID706.
 - Train a Machine Learning model (XGBoost) to predict gold prices  
 
 ---
+🔎 Data Analysis Steps
+1. Data Exploration
+
+Load dataset into pandas DataFrame (gold_df)
+
+Inspect missing values and column types
+
+Visualize trends with Matplotlib
+
+2. Statistical Analysis
+
+Compute descriptive stats (mean, median, mode, std)
+
+Group by year to calculate yearly averages
+
+Quartile analysis of gold prices
+
+Histograms and distributions
+
+3. Comparative Analysis
+
+Normalize gold and indexes to compare performance (start=100)
+
+Count days gold outperformed SPX, USO, SLV, and EUR/USD
+
+Identify “risk-off” days (Gold ↑, Index ↓)
+
+4. Machine Learning (XGBoost)
+
+Train model to predict GLD using other indexes as features
+
+Split dataset (train/test)
+
+Evaluate with MSE, RMSE, R²
+
+Visualize feature importance
+
+---
 
 ## Project structure:
 ```text
