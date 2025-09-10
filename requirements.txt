@@ -4,3 +4,12 @@ pytest
 click
 black
 pytest-cov
+pandas
+numpy
+matplotlib
+seaborn
+jupyter
+scipy
+kagglehub
+scikit-learn
+xgboost
