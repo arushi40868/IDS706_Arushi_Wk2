@@ -1,16 +1,14 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/miniconda
 {
-	"name": "Miniconda (Python 3)",
+	"name": "IDS706 Wk2 (Python)",
 	"build": {
 	  "context": "..",
 	  "dockerfile": ".devcontainer/Dockerfile"
 	},
-  
 	"features": {
 	  "ghcr.io/devcontainers/features/git:1": {}
 	},
-  
 	"customizations": {
 	  "vscode": {
 		"extensions": [
@@ -20,16 +18,14 @@
 		]
 	  }
 	},
-  
-	"postCreateCommand": "pip install -r requirements.txt",
-  
+	"postCreateCommand": "pip install -r requirements.txt || true",
 	"mounts": [
 	  "source=${localEnv:HOME}/.kaggle,target=/home/vscode/.kaggle,type=bind"
 	],
-  
 	"forwardPorts": [8888],
 	"remoteUser": "vscode"
   }
+  
   
   
 
