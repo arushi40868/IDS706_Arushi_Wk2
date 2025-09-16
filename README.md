@@ -54,6 +54,26 @@ Visualize feature importance
 
 ---
 
+## Running Test
+
+Unit and system tests are located in the tests/ folder. They cover:
+-Data loading – verifies gold dataset loads with expected columns and datetime index.
+-Data cleaning – ensures missing values are dropped and column names normalized.
+-ML model prediction – checks that regression produces valid numeric predictions.
+
+Run all tests with:
+
+python -m unittest discover -s tests
+
+Expected output if tests pass:
+
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.01s
+
+OK
+
+
 ## Project structure:
 ```text
 gold-price-analysis/
