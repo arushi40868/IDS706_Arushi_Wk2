@@ -3,8 +3,8 @@
 {
 	"name": "Miniconda (Python 3)",
 	"build": {
-	  "context": ".",
-	  "dockerfile": "Dockerfile"
+	  "context": "..",
+	  "dockerfile": ".devcontainer/Dockerfile"
 	},
   
 	"features": {
@@ -22,15 +22,15 @@
 	},
   
 	"postCreateCommand": "pip install -r requirements.txt",
-
+  
 	"mounts": [
-		"source=${localEnv:HOME}/.kaggle,target=/home/vscode/.kaggle,type=bind"
-	  ],
-	
+	  "source=${localEnv:HOME}/.kaggle,target=/home/vscode/.kaggle,type=bind"
+	],
   
 	"forwardPorts": [8888],
 	"remoteUser": "vscode"
   }
+  
   
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
