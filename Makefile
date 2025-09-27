@@ -1,4 +1,5 @@
 # Makefile for Gold Price Analysis Project
+.PHONY: install test format lint
 
 # Install dependencies
 install:
@@ -26,4 +27,4 @@ format:
 	black .
 
 lint:
-	black --check .
+	flake8 --ignore=E203,W503,E501,__init__.py .

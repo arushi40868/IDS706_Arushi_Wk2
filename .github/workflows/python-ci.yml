@@ -24,9 +24,12 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          pip install black pytest
+          pip install flake8 black pytest
 
       - name: Run lint (Black check)
+        run: make lint
+
+      - name: Run lint (flake8)
         run: make lint
 
       - name: Run tests
