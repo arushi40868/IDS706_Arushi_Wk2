@@ -6,7 +6,7 @@ import numpy as np
 
 def load_data(file_path: str) -> pd.DataFrame:
     """Load CSV data into a pandas DataFrame with Date index."""
-    df = pd.read_csv(file_path, parse_dates=['Date'], index_col='Date')
+    df = pd.read_csv(file_path, parse_dates=["Date"], index_col="Date")
     return df
 
 
@@ -26,10 +26,9 @@ class TestGoldAnalysis(unittest.TestCase):
             self.assertIn(col, df.columns)
 
     def test_clean_data_removes_nulls(self):
-        df = pd.DataFrame({
-            "Price": [1200, None, 1250],
-            "Date": ["2020-01-01", "2020-01-02", None]
-        })
+        df = pd.DataFrame(
+            {"Price": [1200, None, 1250], "Date": ["2020-01-01", "2020-01-02", None]}
+        )
         cleaned = clean_data(df)
         self.assertEqual(len(cleaned), 1)
         self.assertListEqual(list(cleaned.columns), ["price", "date"])

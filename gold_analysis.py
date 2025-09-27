@@ -92,8 +92,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 )  # shuffle=False keeps time order if you want chronological split
 
 # Define and train model
-model = XGBRegressor(n_estimators=300, learning_rate=0.05,
-                     max_depth=4, random_state=42)
+model = XGBRegressor(n_estimators=300, learning_rate=0.05, max_depth=4, random_state=42)
 model.fit(X_train, y_train)
 
 # Predictions
