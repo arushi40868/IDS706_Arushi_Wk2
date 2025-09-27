@@ -129,3 +129,19 @@ test:
 clean:
 	find . -type d -name "__pycache__" -exec rm -rf {} +
 	find . -type f -name "*.pyc" -delete
+
+## Running Dev Container:
+```text
+
+clone repo:
+	git clone https://github.com/arushi40868/IDS706_Arushi_Wk2.git
+	cd IDS706_Arushi_Wk2
+
+Open the project in VS Code:
+	code .
+
+Once running, you’ll be inside the container with everything set up to run:
+	make install   # install dependencies
+	make test      # run tests
+	make lint      # run flake8 linting
+	make format    # run Black auto-formatter
