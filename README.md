@@ -3,6 +3,9 @@ Week 2 analyzing a dataset for ID706.
 
 # Gold Price Analysis (IDS706 Project)  
 
+![Python CI](https://github.com/arushi40868/IDS706_Arushi_Wk2/actions/workflows/python-ci.yml/badge.svg)
+
+
 ![CI](https://img.shields.io/badge/build-passing-brightgreen)
 
 ---
