@@ -2,7 +2,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import kagglehub
+# import kagglehub
 from sklearn.model_selection import train_test_split
 from xgboost import XGBRegressor
 from sklearn.metrics import mean_squared_error, r2_score
@@ -92,7 +92,8 @@ X_train, X_test, y_train, y_test = train_test_split(
 )  # shuffle=False keeps time order if you want chronological split
 
 # Define and train model
-model = XGBRegressor(n_estimators=300, learning_rate=0.05, max_depth=4, random_state=42)
+model = XGBRegressor(n_estimators=300, learning_rate=0.05,
+                     max_depth=4, random_state=42)
 model.fit(X_train, y_train)
 
 # Predictions
