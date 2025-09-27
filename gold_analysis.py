@@ -71,12 +71,19 @@ plt.ylabel("Index Value")
 plt.legend()
 plt.show()
 
-outperf_counts = {}
-for idx in index_cols:
-    mask = normalized[gold_col] > normalized[idx]
-    outperf_counts[idx] = mask.sum()
-print("Days Gold outperformed:")
-print(outperf_counts)
+# Refactored this code to create a function that checks if gold has outperformed other indexes.
+
+
+def gold_outperform(gold_col, index_cols, normalized):
+    outperf_counts = {}
+    for idx in index_cols:
+        mask = normalized[gold_col] > normalized[idx]
+        outperf_counts[idx] = mask.sum()
+    print("Days Gold outperformed:")
+    print(outperf_counts)
+
+
+gold_outperform(gold_col, index_cols, normalized)
 
 annual = comp.resample("Y").last().pct_change() * 100
 annual.index = annual.index.year
@@ -89,7 +96,7 @@ y = gold_df["GLD"]
 # Train-test split
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42, shuffle=False
-)  # shuffle=False keeps time order if you want chronological split
+)
 
 # Define and train model
 model = XGBRegressor(n_estimators=300, learning_rate=0.05,
